@@ -1,0 +1,13 @@
+Sub SelectFields()
+'
+' SelectFields Macro
+'
+'
+With Selection.Find
+ .ClearFormatting
+ .MatchWildcards = True
+ .Text = "\{*\}"
+ .Execute Forward:=True
+ .Wrap = wdFindAsk
+End With
+End Sub
